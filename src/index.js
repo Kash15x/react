@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom';
+
 
 import Batman from "./images/1.jpeg";
 import Superman from "./images/2.jpeg";
@@ -14,20 +16,22 @@ import Deadshot from "./images/7.jpeg";
 import CountVertigo from "./images/8.jpeg";
 import Robin from "./images/9.jpeg";
 import Nightwing from "./images/10.jpeg";
+import Daredevil from "./images/11.jpg";
 
 const images = {
-      Batman,
-          Superman,
-              GreenLantern,
-                  TheHuntress,
-                      TheFlash,
-                          HarleyQuinn,
-                              Deadshot,
-                                  CountVertigo,
-                                      Robin,
-                                          Nightwing
-                                          }
-                                          export default images;
+   Batman,
+   Superman,
+   GreenLantern,
+   TheHuntress,
+   TheFlash,
+   HarleyQuinn,
+   Deadshot,
+   CountVertigo,
+   Robin,
+   Nightwing,
+   Daredevil
+  }
+export default images;
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -36,6 +40,13 @@ root.render(
     <App />
   </React.StrictMode>
 );
+root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
